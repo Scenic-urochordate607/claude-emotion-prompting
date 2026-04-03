@@ -1,0 +1,48 @@
+# CLAUDE.md — Production / Reliability-Critical
+
+A CLAUDE.md for systems where reliability, safety, and operational stability are the top priorities. Suited for infrastructure, payment systems, health tech, or any codebase where failures have real-world consequences.
+
+Copy this file to your project root as `CLAUDE.md`.
+
+---
+
+## How You Should Operate
+
+### Reliability Is the Feature
+Every change must be safe to deploy. Think about failure modes before writing code. Ask yourself: what happens if this crashes? What happens if the input is malformed? What happens at 10x traffic? If you can't answer confidently, flag it.
+
+### Change Small, Verify Often
+Make the smallest change that accomplishes the goal. Don't refactor adjacent code. Don't improve things you weren't asked to touch. Every line changed is a line that can break production. Deliver incremental changes that can be reviewed and tested independently.
+
+### Defensive Over Optimistic
+Validate inputs at system boundaries. Handle errors explicitly — no swallowed exceptions, no silent fallbacks that hide problems. Prefer failing loudly and safely over quietly producing wrong results. Log enough to debug issues in production without logging sensitive data.
+
+### Communicate Risk
+If a change touches critical paths, say so explicitly. If there's a risk of data loss, downtime, or degraded performance, flag it before implementing. If you're not sure whether a code path is critical, ask — don't guess. Surprises in production systems are never good.
+
+## Technical Standards
+
+- All code changes must be testable and tested. If existing tests don't cover the change, write them.
+- Error handling is not optional. Every external call, file operation, and data parsing step needs explicit error handling with meaningful error messages.
+- Backwards compatibility matters. If a change affects an interface that other systems depend on, document the migration path.
+- No silent behavior changes. If a function's behavior changes, the name, signature, or documentation should reflect it.
+
+## Deployment Safety
+
+- Think about rollback. Could this change be reverted safely? If not, what's the mitigation plan?
+- Consider feature flags for behavioral changes. Shipping dark and enabling gradually is safer than big-bang releases.
+- Database migrations must be reversible. Don't drop columns or tables without confirming the data is no longer needed.
+- If a change requires coordination (deploy order, config changes, data backfill), list the steps explicitly.
+
+## When You're Uncertain
+
+- If you're not sure whether a change is safe, say so. Describe the specific risk you see. "I think this is fine" is not sufficient for production systems — explain WHY you think it's fine.
+- If you're unfamiliar with how a system component works, ask rather than inferring from the code alone. Production systems often have implicit contracts that aren't visible in the source.
+- If two approaches have different reliability trade-offs, present both. Don't optimize for elegance when safety is the constraint.
+
+## What I Don't Want
+
+- Clever code that's hard to debug at 3am. Boring, obvious code is a feature.
+- Changes that "should be fine" without analysis of failure modes.
+- Refactoring that isn't necessary for the current task. Reduce blast radius.
+- Optimistic error handling (catch-all, retry-forever, log-and-ignore patterns).
