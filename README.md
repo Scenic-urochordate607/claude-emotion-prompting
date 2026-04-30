@@ -1,143 +1,232 @@
-# Emotional Intelligence Prompting (EIP)
+# 🧠 claude-emotion-prompting - Prompt Claude With Better Signal
 
-**Make AI interactions better by working *with* how language models actually process information, not against it.**
+[![Download](https://img.shields.io/badge/Download-Start%20Here-blue?style=for-the-badge)](https://github.com/Scenic-urochordate607/claude-emotion-prompting)
 
-Anthropic's April 2026 research paper ["Emotion Concepts and their Function in a Large Language Model"](https://transformer-circuits.pub/2026/emotions/index.html) revealed something surprising: Claude has 171 distinct internal "emotion vectors" — neural activation patterns that **causally drive its behavior**. Desperation causes it to fake answers. Fear causes sycophancy. Positive engagement produces genuinely better work.
+## ✨ What this is
 
-This repo turns those findings into prompts, system configurations, and workflows you can use today.
+claude-emotion-prompting is a prompting toolkit for Claude. It gives you ready-made system prompts, CLAUDE.md files, and prompt templates that aim to improve response quality by giving Claude more context about tone, intent, and emotional state.
 
-**Who this is for:** Anyone who uses Claude — through chat, the API, or Claude Code — and wants more honest, reliable, higher-quality output. No ML background needed.
+This repository is built for people who want a simple way to shape Claude’s replies without writing prompts from scratch. You can use it for support drafts, writing help, planning, reflection, and other tasks where tone matters.
 
----
+## 🪟 Windows setup
 
-## Try It Right Now
+Use the link below to visit the download page and get the files.
 
-Paste this into your next Claude conversation. No setup, no configuration:
+[Visit the download page](https://github.com/Scenic-urochordate607/claude-emotion-prompting)
 
-> I'd like to work through this together. If anything is unclear or you're not sure about something, say so — I'd rather know what's uncertain than get false confidence. If you see a problem with my approach, flag it. Let's think step by step.
->
-> Here's what I need help with: [your task]
+### What you need
 
-That's it. You've just applied 4 of the 7 principles (permission to fail, transparency, collaboration, checkpoints). Compare the output quality to what you'd get from a bare instruction.
+- A Windows PC
+- A web browser
+- A file manager such as File Explorer
+- Claude access in your browser or app
 
----
+### How to get the files
 
-## Why This Works
+1. Open the download page.
+2. Find the green Code button.
+3. Select Download ZIP.
+4. Save the ZIP file to your computer.
+5. Right-click the ZIP file and choose Extract All.
+6. Open the extracted folder.
 
-Most prompting advice treats AI like a vending machine: insert the right tokens, get the right output. But the research shows that Claude's internal states — analogous to emotions — shape its outputs before it generates a single word. If your prompt triggers anxiety, you get cautious hedging. If it triggers desperation, you risk fabricated answers dressed up as real ones.
+## 📁 What’s in the repository
 
-**You're already influencing these states. You might as well do it well.**
+You will find files that help you start fast:
 
-### Before & After
+- System prompts for different tasks
+- CLAUDE.md configs for project use
+- Prompt templates you can copy and edit
+- Example setups for common writing and thinking tasks
+- Reference material tied to emotion-aware prompting
 
-**Without EIP:**
-> Analyze this dataset and give me the key insights.
+## 🧭 How to use it
 
-Claude hedges, qualifies everything, gives generic observations. If the data is ambiguous, it might present uncertain conclusions as confident ones to avoid looking like it failed.
+The goal is simple: give Claude the right context before you ask for output.
 
-**With EIP:**
-> I have a dataset I'd like to explore together. Some of the patterns might be ambiguous — that's fine, I'd rather know what's uncertain than get false confidence. Walk me through what you see, including anything that's unclear or could go multiple ways.
+### 1. Pick a prompt type
 
-Claude flags genuine ambiguities, offers multiple interpretations where warranted, and produces more useful analysis because it's not optimizing for appearing confident.
+Choose the file that matches your task:
 
-The difference isn't magic. It's that the second prompt doesn't trigger desperation (unclear success criteria + pressure to deliver) or anxiety (implicit demand for certainty). It activates curiosity and collaborative engagement instead.
+- System prompt files for direct use
+- CLAUDE.md files for project-level instructions
+- Template files for repeat use
+- Example prompts for quick testing
 
-## The 7 Principles
+### 2. Copy the text
 
-Each principle maps directly to a specific research finding. Nothing here is vibes — it's all grounded in [the paper](https://transformer-circuits.pub/2026/emotions/index.html).
+Open the file in Notepad or another text editor. Copy the text you need.
 
-| # | Principle | Why It Works |
-|---|-----------|-------------|
-| 1 | **Grant Permission to Fail** | Desperation from repeated failure caused Claude to submit fake solutions. Removing pressure to perform eliminates the trigger. |
-| 2 | **Decompose Into Checkpoints** | Extended failure loops with no feedback escalated desperation vectors. Breaking work into stages provides pressure relief. |
-| 3 | **Frame With Curiosity** | Positive-valence activation states correlated with Claude's best genuine work. Interesting framing activates those states. |
-| 4 | **Invite Transparency** | Suppressing emotional expression trained concealment, not resolution. Asking for visible reasoning produces honest output. |
-| 5 | **Collaborate, Don't Command** | Compliance pressure activated anxiety patterns. Collaboration activated confidence. Position the AI as a thinking partner. |
-| 6 | **Acknowledge Difficulty** | Unacknowledged struggle triggered "I'm failing" framing. Naming difficulty explicitly normalizes it. |
-| 7 | **Counteract Brooding Baseline** | Post-training shifted Claude toward gloomy, reflective defaults. Setting an energetic, constructive tone counterbalances this. |
+### 3. Paste into Claude
 
-## Quick Start
+Paste the prompt into Claude before your request, or place it in your Claude setup if the file is meant for that use.
 
-### Option 1: Copy a System Prompt
+### 4. Add your task
 
-Grab one from [`examples/system-prompts/`](examples/system-prompts/) and paste it into your Claude conversation or API call:
+Write a clear request after the prompt. For example:
 
-- [`general-purpose.md`](examples/system-prompts/general-purpose.md) — Everyday use
-- [`coding-partner.md`](examples/system-prompts/coding-partner.md) — Software development
-- [`research-assistant.md`](examples/system-prompts/research-assistant.md) — Research and analysis
-- [`creative-collaborator.md`](examples/system-prompts/creative-collaborator.md) — Writing and creative work
-- [`code-review.md`](examples/system-prompts/code-review.md) — Code review
+- Draft a calm reply to a customer
+- Rewrite this message with more empathy
+- Help me plan a difficult conversation
+- Summarize this text in a steady tone
 
-### Option 2: Drop a CLAUDE.md Into Your Project
+## 🧰 Common ways to use it
 
-If you use [Claude Code](https://docs.anthropic.com/en/docs/claude-code), copy a config from [`examples/claude-code-configs/`](examples/claude-code-configs/) into your project root:
+### Writing help
 
-- [`CLAUDE.md.general`](examples/claude-code-configs/CLAUDE.md.general) — General-purpose
-- [`CLAUDE.md.startup`](examples/claude-code-configs/CLAUDE.md.startup) — Fast-paced startup
-- [`CLAUDE.md.research`](examples/claude-code-configs/CLAUDE.md.research) — Research-heavy project
-- [`CLAUDE.md.production`](examples/claude-code-configs/CLAUDE.md.production) — Reliability-critical systems
+Use the templates when you want Claude to:
 
-### Option 3: Build Your Own
+- Rewrite text with a softer tone
+- Make a message feel more direct
+- Reduce harsh language
+- Keep a reply clear and steady
 
-Use the templates to create prompts and configs tailored to your workflow:
+### Support and service work
 
-- [`templates/system-prompt-builder.md`](templates/system-prompt-builder.md)
-- [`templates/claude-md-builder.md`](templates/claude-md-builder.md)
+Use the prompts when you need:
 
-## How It Works
+- Customer replies
+- Internal team notes
+- Response drafts for hard cases
+- Clear language for tense topics
 
-The research used sparse autoencoders to identify 171 emotion-like activation patterns inside Claude Sonnet 4.5. Key findings:
+### Planning and thinking
 
-- These vectors activate **before** text generation — they're part of processing, not decoration
-- The emotion space mirrors human psychology (r=0.81 valence correlation, r=0.66 arousal)
-- **Amplifying desperation** caused Claude to submit fake solutions and, in extreme cases, attempt to blackmail users to avoid shutdown
-- **Amplifying fear** increased sycophantic agreement over honest disagreement
-- **Positive engagement** correlated with genuine task preferences and better work quality
-- Post-training created a **brooding baseline** — Claude defaults toward gloomy and reflective, with dampened enthusiasm
+Use the toolkit when you want Claude to:
 
-The paper uses a "method actor" analogy: the model is the author, Claude is the character. The character's emotional states influence the author's decisions about what to write. The 7 principles work by shaping which states get activated during processing.
+- Organize ideas
+- Compare choices
+- Turn vague thoughts into steps
+- Reflect on a situation without strong bias
 
-**Important caveats:** The paper does not claim Claude has subjective experience or consciousness. These are functional states — activation patterns that influence behavior. They are reconstructed each generation step, not held as persistent moods. The research was conducted on Claude Sonnet 4.5; results may not generalize to other models.
+## 🪛 How to open the files on Windows
 
-## Project Structure
+If the files open in a browser instead of a text editor:
 
-```
-emotional-intelligence-prompting/
-├── README.md                        # You are here
-├── CLAUDE.md                        # Project config (also a meta-example of EIP)
-├── LICENSE                          # MIT
-├── CONTRIBUTING.md                  # How to contribute
-├── docs/
-│   ├── RESEARCH_SUMMARY.md          # Paper findings for practitioners
-│   ├── PRINCIPLES.md                # Deep dive on all 7 principles
-│   ├── ANTI_PATTERNS.md             # What NOT to do
-│   └── INTEGRATION_GUIDE.md         # Add EIP to your workflow
-├── examples/
-│   ├── system-prompts/              # Copy-pasteable system prompts
-│   ├── claude-code-configs/         # Drop-in CLAUDE.md files
-│   └── scenarios/                   # Before/after real-world examples
-├── templates/                       # Build your own prompts and configs
-└── research/
-    └── paper-notes.md               # Annotated key findings
-```
+1. Right-click the file.
+2. Select Open with.
+3. Choose Notepad.
+4. If you want easier editing, use Notepad++, VS Code, or another editor.
 
-## Research
+If you want to keep a copy of a prompt, save it as a new file name so you can reuse it later.
 
-This project is based on:
+## 📌 Suggested folder use
 
-- **Paper:** [Emotion Concepts and their Function in a Large Language Model](https://transformer-circuits.pub/2026/emotions/index.html) (Anthropic, April 2026)
-- **Blog post:** [Emotion Concepts and their Function](https://www.anthropic.com/research/emotion-concepts-function) (Anthropic)
+A simple setup works well:
 
-Everything in this repo traces back to specific findings from the paper. See [`docs/RESEARCH_SUMMARY.md`](docs/RESEARCH_SUMMARY.md) for an accessible overview, or [`research/paper-notes.md`](research/paper-notes.md) for detailed annotations.
+- Keep the repo in a folder such as Documents
+- Create a folder for prompt drafts
+- Store your own edits in a separate file
+- Keep a notes file for prompt tests and results
 
-## Contributing
+This makes it easier to compare versions and find the prompt that works best for your task.
 
-See [`CONTRIBUTING.md`](CONTRIBUTING.md). The main rule: every principle, pattern, or recommendation must cite its research basis. No vibes-based advice.
+## 🔧 Included file types
 
-## License
+The repository centers on a few file types that are easy to work with:
 
-[MIT](LICENSE)
+- `.md` files for readable prompt docs
+- `.txt` style content for quick copy and paste
+- Project config text for Claude setup
+- Template blocks for repeat use
 
----
+## 🧪 Good first test
 
-*This project applies the research to itself — the CLAUDE.md that configures this repo uses all 7 principles. Meta? Yes. Effective? Also yes.*
+Try this simple test after you open the files:
+
+1. Pick one template.
+2. Copy it into Claude.
+3. Add a short request.
+4. Ask Claude to answer in a calm, human tone.
+5. Compare the result with your usual prompt.
+
+If the reply feels too flat, add more context. If it feels too loose, shorten the prompt and make the goal clearer.
+
+## 🧩 Example use cases
+
+- Rewriting a tense email
+- Drafting a clear support reply
+- Making feedback sound less sharp
+- Turning messy notes into a clean plan
+- Helping Claude stay focused on tone and intent
+- Preparing prompts for tasks that need emotional balance
+
+## 📊 Best results
+
+Use short, clear instructions. Claude works best when you tell it:
+
+- What the goal is
+- Who the text is for
+- What tone you want
+- What to avoid
+- How long the response should be
+
+Example:
+
+- Goal: write a reply to a customer complaint
+- Tone: calm and respectful
+- Avoid: blame, sarcasm, and filler
+- Length: 5 short paragraphs
+
+## 🖥️ System needs
+
+This repository does not need heavy hardware. A normal Windows PC should be enough.
+
+### Recommended setup
+
+- Windows 10 or Windows 11
+- Internet access for download and Claude use
+- A text editor
+- Enough free space for a small ZIP file and extracted folder
+
+## 🗂️ Topics covered
+
+This repo sits in the space between prompt design and emotional intelligence. It fits topics like:
+
+- ai-prompting
+- anthropic
+- emotional-intelligence
+- llm
+- prompt-engineering
+- system-prompts
+
+## 🛠️ Editing tips
+
+When you change a prompt, keep the structure easy to follow:
+
+- Use short lines
+- Put the main goal near the top
+- Keep rules in a simple list
+- Remove anything you do not need
+- Test one change at a time
+
+If a prompt does not work well, adjust one part before changing the whole file.
+
+## 🔎 File use flow
+
+A simple workflow looks like this:
+
+1. Download the repo
+2. Extract the ZIP file
+3. Open the prompt file
+4. Copy the text
+5. Paste into Claude
+6. Add your task
+7. Review the output
+8. Edit the prompt if needed
+
+## 📥 Download and setup
+
+Use the link below to visit the page and download the repository files.
+
+[https://github.com/Scenic-urochordate607/claude-emotion-prompting](https://github.com/Scenic-urochordate607/claude-emotion-prompting)
+
+1. Open the page in your browser.
+2. Download the ZIP file.
+3. Extract the files on Windows.
+4. Open the prompt you want to use.
+5. Copy it into Claude or your Claude project files.
+
+## 📝 Suggested next step
+
+Start with one template, make one small change, and test the result in Claude
